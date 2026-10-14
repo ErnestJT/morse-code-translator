@@ -10,7 +10,7 @@ def retrieve_morse_alphabet() -> ItemsView:
 
     soup = BeautifulSoup(website_html,'html.parser')
     tables = soup.select('div table.dotdash')[:5]
-    print(tables)
+    
     morse_code: dict[str,str] = {}
     for table in tables:
         words = table.select('tr')[1:]
