@@ -1,7 +1,7 @@
 from morse_alphabet import retrieve_morse_alphabet
 
 
-MORSE_CODE_ENCODING: dict[str, str] = {char.lower():morse for char, morse in retrieve_morse_list()}
+MORSE_CODE_ENCODING: dict[str, str] = {char.lower():morse for char, morse in retrieve_morse_alphabet()}
 MORSE_CODE_DECODING: dict[str, str] = {morse:char for char, morse in MORSE_CODE_ENCODING.items()}
 
 def encode_to_morse(statement: str) -> str:
